@@ -9,11 +9,11 @@ try:
     browser.get(link)
 
     # Ваш код, который заполняет обязательные поля
-    input1 = browser.find_element(By.CSS_SELECTOR, "input.first")
+    input1 = browser.find_element(By.XPATH, '//input[@placeholder="Input your first name"]')
     input1.send_keys("Ivan")
-    input2 = browser.find_element(By.CSS_SELECTOR, "input.second")
+    input2 = browser.find_element(By.XPATH, '//input[@placeholder="Input your last name"]')
     input2.send_keys("Petrov")
-    input3 = browser.find_element(By.CSS_SELECTOR, "input.third")
+    input3 = browser.find_element(By.XPATH, '//input[@placeholder="Input your email"]')
     input3.send_keys("Smolensk")
 
     # Отправляем заполненную форму
